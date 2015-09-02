@@ -2,15 +2,15 @@
 /*
  * Initial setting
  * */
-let gulp = require('gulp');
+const gulp = require('gulp');
 //let runSequence = require('run-sequence');
 //let del = require('del');
-let dirs = require('./package.json').config.dirs;
+const dirs = require('./package.json').config.dirs;
 
 /*
  * Examples
  * */
-//gulp.task('runsequence', function(cb) {
+//gulp.task('runsequence', (cb) => {
 //    runSequence(
 //        /* tasks here */
 //        cb);
