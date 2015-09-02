@@ -1,0 +1,30 @@
+{
+  "name": "project-name",
+  "description": "project-description",
+  "version": "0.0.0",
+  "author": "authorName",
+  "readmeFilename": "README.md",
+  "devDependencies": {
+    "gulp": "latest",
+    "watch": "latest"
+  },
+  "scripts": {
+    "preinstall": "",
+    "postinstall": "",
+    "clean:allrelease": "rm -rf $npm_package_config_dirs_release",
+    "copy:torelease": "cp -r $npm_package_config_dirs_deploy $npm_package_config_dirs_release",
+    "watch": "watch 'npm run deploy' $npm_package_config_dirs_src",
+    "common:before": "echo CHANGE_UR_CMMN_TSK",
+    "deploy": "npm run common:before",
+    "release": "npm run common:before && npm run clean:allrelease && npm run copy:torelease",
+    "start": "npm run release"
+  },
+  "config": {
+    "dirs": {
+      "deploy": "deploy",
+      "release": "_release",
+      "src": "src",
+      "libs": "libs"
+    }
+  }
+}
